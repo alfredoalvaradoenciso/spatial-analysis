@@ -1,7 +1,7 @@
 set more off, perma
-gl base "C:\Users\wb592130\Downloads"
-gl map "C:\Users\wb592130\Downloads\spatial-analysis-main\spatial-analysis-main\Mapas"
-
+gl base "C:\Users\Dell\Desktop\Bases\ENHAT"
+gl map "C:\Users\Dell\Documents\GitHub\spatial-analysis\shapefiles"
+gl img "C:\Users\Dell\Documents\GitHub\spatial-analysis\img"
 cd "$base"
 
 /*
@@ -33,6 +33,7 @@ merge 1:1 ID_1 using "$base\workers.dta", nogen
 	title("Firms using artificial intelligence in Peru") ///
   note("Source: ENHAT 2016. Note: Only small, medium and large formal firms.") point(data("$base\puntos.dta") xcoord(_X) ycoord(_Y) ///
 	by(uno) fcolor(red*0.50 red*1.75) legenda(on)) legend(size(*1.75) rowgap(1.5) position(8) title("# of workers" "in thousands" , size(4) justification(left) bexpand)) 
+graph export "$img\map-points.emf", replace
 
 	/*
 

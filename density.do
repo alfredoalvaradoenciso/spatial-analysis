@@ -1,7 +1,8 @@
 clear all
 set more off, perma
 gl base "C:\Users\Dell\Desktop\Bases\ENHAT"
-gl map "C:\Users\Dell\Documents\GitHub\spatial-analysis\Mapas"
+gl map "C:\Users\Dell\Documents\GitHub\spatial-analysis\shapefiles"
+gl img "C:\Users\Dell\Documents\GitHub\spatial-analysis\img"
 cd "$base"
 
 
@@ -27,7 +28,7 @@ gen _ID=_n
 spmap using "$base\Lima_xy", cln(3) id(_ID)  legs(2) ///
 title("Cluster de empresas que usan" "inteligencia artificial en Lima")  note("Fuente: ENHAT (2016)") point(xcoord(_X) ycoord(_Y) ///
 by(any) fcolor(navy red) legenda(on)) legend(size(*2) rowgap(1.5))
-graph export "$base\mapa_lima.emf",replace
+graph export "$img\mapa_lima.emf",replace
 
 ***Density kernel map graphs
 preserve
@@ -49,4 +50,4 @@ use "$base\kde.dta", clear
 spmap p using "$base\ctemp.dta", id(spgrid_id) clmethod(quantile) clnumber(20) /// 
 fcolor(Rainbow) ocolor(none ..) legend(off) title("No usan inteligencia artificial") name(g2, replace) nodraw
 graph combine g1 g2, title("Concentración de empresas en Lima, 2016") subtitle("Densidad kernel de empresas georeferenciadas", size(*0.8)) note("Fuente: ENHAT 2016")  ycommon name(combined, replace) graphregion(color(white))
-graph export "$base\mapa_densidad_lima.emf",replace
+graph export "$img\mapa_densidad_lima.emf",replace
