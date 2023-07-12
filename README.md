@@ -1,4 +1,4 @@
 # spatial-analysis
 
-[Contribution guidelines for this project](img/antena_prov.png)
+<img width="30px" src="./img/antena_prov.png" alt="image_name png" />
 
