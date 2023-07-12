@@ -61,9 +61,7 @@ graph export "$img\mapa_lima.png", replace
 
 
 
-	/*
-
-use ITEM LONGITUD LATITUD using "$base\shp\data.dta", clear
+use ITEM LONGITUD LATITUD using "$base\geo-fibra-optica.dta", clear
 *rename (LONGITUD LATITUD) (gpslongitud gpslatitud)
 tempfile geo
 save `geo'
