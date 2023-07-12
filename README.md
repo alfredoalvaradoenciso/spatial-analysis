@@ -1,4 +1,4 @@
-# spatial-analysis
+# Spatial analysis
 
 <img src="./img/antena_reg.png" alt="Number of satellites antennas in Peruvian regions" />
 
