@@ -25,7 +25,7 @@ merge m:1 FIRST_IDDP using `a'
 spmap antenainternet using "$map\perxy_departamental" , id(idmap_departamento)  ///
  clmethod(custom) clbreaks(0 25 50 100 150 323) fcolor(Blues) title("2012") name(m2012, replace) nodraw 
 graph combine m2007 m2012, title("Number of satellites antennas in Peruvian regions")  graphregion(color(white))  note(Source: RENAMU)
-graph export "$img\antena_reg.emf",replace
+graph export "$img\antena_reg.png",replace
 
 **Province level
 use "$map\perushp_provincial", clear
@@ -46,4 +46,4 @@ merge m:1 FIRST_IDPR using `a'
 spmap antenainternet using "$map\perxy_provincial" , id(id) clmethod(custom) clbreaks(0 1 3 7 15 216) fcolor(Blues) ///
 title("2012") name(m2012, replace) nodraw 
 graph combine m2007 m2012, title("Number of satellites antennas in Peruvian provinces")  graphregion(color(white)) note(Source: RENAMU)
-graph export "$img\antena_prov.emf",replace
+graph export "$img\antena_prov.png",replace

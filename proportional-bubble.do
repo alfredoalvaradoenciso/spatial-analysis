@@ -35,4 +35,4 @@ spmap using  "$base\Lima_xy", id(id) fcolor(white) title("Lima", span margin(med
  
  
  graph combine all lima,  title("Pharmaceutical firm concentration by size, 2015") graphregion(color(white)) note(Source: Produce (2015). Note: Only formal firms.)
-graph export "$img\pharma.emf",replace
+graph export "$img\pharma.png",replace
